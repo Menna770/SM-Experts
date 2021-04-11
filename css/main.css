@@ -1,0 +1,324 @@
+/* Start Navbar */
+.navbar {
+  padding: 0;
+  background-image: linear-gradient(150deg, #fff 40%, #f27024 45%);
+  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Pathway Gothic One", sans-serif;
+}
+
+.navbar .navbar-brand {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+}
+
+.navbar .navbar-brand img {
+  width: 54px;
+  height: 64px;
+}
+
+.navbar .navbar-brand .brand-paragraph p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navbar .nav-item {
+  margin-left: 20px;
+}
+
+.navbar .nav-link {
+  border-radius: 20px;
+  font-size: 14px;
+  color: #fff !important;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.navbar .navbar-collapse .active,
+.navbar .nav-link:hover {
+  background-color: #fb7f37;
+  border-radius: 20px;
+}
+/* End Navbar */
+
+/* Start Header */
+header {
+  background-image: url(../images/home-header.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 136px;
+}
+/* End Header */
+
+/* Start About US */
+.about {
+  background-color: #efefef;
+  padding: 7rem 0 12rem;
+}
+
+.about .about-us-term {
+  background-color: #fff;
+  padding: 50px 20px 20px;
+  border-radius: 25px;
+  height: 300px;
+}
+
+.about .about-us-img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about h3 {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.about .about-us-content ul {
+  padding-left: 20px;
+}
+
+.about .about-us-content ul li::marker {
+  color: #f27024;
+}
+
+.about button {
+  background-color: #f27024;
+  color: #fff;
+  border: 1px solid #f27024;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  padding: 3px 15px;
+  transition: all 0.5s;
+}
+
+.about button:hover {
+  background-color: #fff;
+  color: #f27024;
+}
+/* End About US */
+
+/* Start Our Training */
+.our-training {
+  position: relative;
+}
+
+.triangle-bg {
+  background-color: #f27024;
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid #fff;
+  border-left: 400px solid #efefef;
+  border-right: 400px solid #efefef;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.our-training .our-training-head p {
+  border: 0.5px solid #ccc;
+  padding: 5px 20px;
+}
+
+.our-training .our-training-head-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 7px;
+  border: 5px solid #efefef;
+}
+.our-training .our-training-term {
+  margin-bottom: 2.5rem;
+  padding: 0 20px;
+}
+
+.our-training .our-training-term h6 {
+  color: #f27024;
+  margin-bottom: 1.5rem;
+}
+
+.our-training .our-training-term p {
+  color: #07435b;
+}
+
+.our-training .our-training-term button {
+  background-color: #fff;
+  color: #07435b;
+  padding: 2px 15px;
+  border: 0.5px solid #07435b;
+  transition: all 0.5s;
+}
+
+.our-training .our-training-term button:hover {
+  background-color: #07435b;
+  color: #fff;
+}
+
+.our-training .our-training-term-img,
+.our-training .our-training-term-info {
+  float: left;
+}
+
+.our-training .our-training-term-img {
+  width: 20%;
+}
+
+.our-training .our-training-term-info {
+  width: 80%;
+  padding-left: 15px;
+}
+/* End Our Training */
+
+/* Start Location */
+.location .location-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  color: #fff;
+  background-color: #07435b;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 7px solid #fff;
+  position: relative;
+  top: 45px;
+}
+
+.location .location-icon::before,
+.location .location-icon::after {
+  content: "";
+  width: 200px;
+  height: 2px;
+  color: #07435b;
+  background-color: #07435b;
+  position: absolute;
+  top: 38px;
+}
+
+.location .location-icon::before {
+  right: 83px;
+}
+
+.location .location-icon::after {
+  left: 83px;
+}
+/* End Location */
+
+/* Start Footer */
+footer {
+  background-color: #07435b;
+  color: #fff;
+}
+
+footer .footer-copyright p {
+  font-size: 15px;
+}
+
+footer .footer-logo img {
+  width: 54px;
+  height: 64px;
+}
+/* End Footer */
+
+/* Start Global Classes */
+.text-blue {
+  color: #07435b;
+}
+
+.text-orange {
+  color: #f27024;
+}
+/* End Global Classes */
+
+/* Media Query */
+@media (max-width: 768px) {
+  p,
+  li {
+    font-size: 14px !important;
+  }
+
+  /* Navbar */
+  .navbar .navbar-brand {
+    margin-left: 30px;
+  }
+
+  /* Header */
+  header h3 {
+    font-size: 24px;
+  }
+
+  /* About US*/
+  .about .about-us-term {
+    margin-bottom: 5rem;
+  }
+
+  .about button {
+    bottom: 65px;
+  }
+
+  /* Our Training */
+  .triangle-bg {
+    border-left: 150px solid #efefef;
+    border-right: 150px solid #efefef;
+  }
+
+  /* Location */
+  .location .location-icon::before,
+  .location .location-icon::after {
+    width: 100px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) 
+{
+
+  /* Navbar */  
+  .navbar-light .navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+  }
+
+  /* About US*/
+  .about .about-us-term {
+    height: 400px;
+  }
+
+  /* Our Training */
+  .triangle-bg {
+    border-left: 300px solid #efefef;
+    border-right: 300px solid #efefef;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Navbar */
+  .navbar .navbar-collapse {
+    position: relative;
+    left: -30px;
+  }
+
+  .navbar .nav-item {
+    text-align: center;
+  }
+
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .navbar-light .navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+  }
+}
