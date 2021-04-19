@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -19,9 +20,10 @@
     <!-- Start Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
+        
         <div class="navbar-brand-container">
           <div class="navbar-brand">
-            <img class="img-fluid img-thumbnail" src="images/logo.jpg" />
+            <img class="img-fluid" src="images/logo.jpg" />
             <div class="brand-paragraph ml-3 text-blue">
               <p>Strategic</p>
               <p>Management</p>
@@ -29,8 +31,8 @@
             </div>
           </div>
         </div>
-
-        <div class="navbar-nav-container">
+  
+        <div class="navbar-nav-container ">
           <button
             class="navbar-toggler"
             type="button"
@@ -46,9 +48,7 @@
           <div class="collapse navbar-collapse py-3" id="navbarNav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html"
-                  >Home<span class="sr-only">(current)</span></a
-                >
+                <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="services.html">Services</a>
@@ -65,12 +65,13 @@
             </ul>
           </div>
         </div>
+        
       </div>
     </nav>
     <!-- End Navbar -->
 
     <!-- Start Header -->
-    <header>
+    <header class="home-header">
       <div class="container">
         <div
           class="header-head h-100 d-flex justify-content-center align-items-center"
@@ -147,14 +148,14 @@
     <!-- End About US -->
 
     <!-- Start Our Training -->
-    <section class="our-training pb-5">
+    <section class="our-training">
       <div class="container">
         <div class="triangle-bg"></div>
         <div
           class="our-training-head d-flex flex-column justify-content-center align-items-center"
         >
           <div class="our-training-head-img">
-            <img class="img-fluid" src="images/our-training-head.png" />
+            <img class="img-fluid hover-img" src="images/our-training-head.png" />
           </div>
           <h2 class="text-orange text-uppercase my-4">
             Our <span class="text-blue">Training</span>
@@ -168,11 +169,10 @@
 
         <div class="our-training-content mt-5">
           <div class="row">
+
             <div class="col-md-6">
               <div class="our-training-term">
-                <div class="our-training-term-img">
-                  <img class="img-fluid" src="images/our-training-1.png" />
-                </div>
+                <div class="our-training-term-img img-1"></div>
                 <div class="our-training-term-info">
                   <h6>Project Management Training</h6>
                   <p>
@@ -187,9 +187,7 @@
 
             <div class="col-md-6">
               <div class="our-training-term">
-                <div class="our-training-term-img">
-                  <img class="img-fluid" src="images/our-training-2.png" />
-                </div>
+                <div class="our-training-term-img img-2"></div>
                 <div class="our-training-term-info">
                   <h6>Business Analysis Training</h6>
                   <button>Read More</button>
@@ -200,9 +198,7 @@
 
             <div class="col-md-6">
               <div class="our-training-term">
-                <div class="our-training-term-img">
-                  <img class="img-fluid" src="images/our-training-3.png" />
-                </div>
+                <div class="our-training-term-img img-3"></div>
                 <div class="our-training-term-info">
                   <h6>Management Skills Training</h6>
                   <p>
@@ -217,9 +213,7 @@
 
             <div class="col-md-6">
               <div class="our-training-term">
-                <div class="our-training-term-img">
-                  <img class="img-fluid" src="images/our-training-4.png" />
-                </div>
+                <div class="our-training-term-img img-4"></div>
                 <div class="our-training-term-info">
                   <h6>Customized Training?</h6>
                   <p>
@@ -231,8 +225,10 @@
                 <div class="clearfix"></div>
               </div>
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
     <!-- End Our Training -->
@@ -279,5 +275,6 @@
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,9 +1,22 @@
+/******************** Start HOME PAGE ********************/
+body { 
+  font-family: century-gothic, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1,h2,h3,h4,h5,h6 {font-weight: bold;}
+
 /* Start Navbar */
 .navbar {
   padding: 0;
+  width: 100%;
+  z-index: 999;
   background-image: linear-gradient(150deg, #fff 40%, #f27024 45%);
   font-family: "Nanum Gothic", sans-serif;
   font-family: "Pathway Gothic One", sans-serif;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .navbar .navbar-brand {
@@ -14,8 +27,12 @@
 }
 
 .navbar .navbar-brand img {
+  position: relative;
+  top: -5px;
   width: 54px;
   height: 64px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 .navbar .navbar-brand .brand-paragraph p {
@@ -44,27 +61,29 @@
 /* End Navbar */
 
 /* Start Header */
-header {
+.home-header {
   background-image: url(../images/home-header.png);
+  background-attachment: fixed;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
-  position: relative;
   height: 136px;
 }
+
+.home-header h3 {line-height: 1.6;}
 /* End Header */
 
 /* Start About US */
 .about {
   background-color: #efefef;
-  padding: 7rem 0 12rem;
+  padding: 12rem 0;
 }
 
 .about .about-us-term {
   background-color: #fff;
-  padding: 50px 20px 20px;
+  padding: 50px 20px 30px;
   border-radius: 25px;
-  height: 300px;
+  height: 320px;
 }
 
 .about .about-us-img {
@@ -79,6 +98,7 @@ header {
 .about h3 {
   text-align: center;
   margin: 1.5rem 0;
+  font-weight: bolder;
 }
 
 .about .about-us-content ul {
@@ -138,9 +158,11 @@ header {
   border-radius: 7px;
   border: 5px solid #efefef;
 }
+
 .our-training .our-training-term {
-  margin-bottom: 2.5rem;
+  margin-bottom: 20px;
   padding: 0 20px;
+  height: 150px;
 }
 
 .our-training .our-training-term h6 {
@@ -161,6 +183,7 @@ header {
 }
 
 .our-training .our-training-term button:hover {
+  cursor: pointer;
   background-color: #07435b;
   color: #fff;
 }
@@ -171,11 +194,46 @@ header {
 }
 
 .our-training .our-training-term-img {
-  width: 20%;
+  width: 25%;
+  height: 100%;
+  transition: all 0.5s;
+  background-repeat: no-repeat;
+}
+
+.our-training .img-1 {
+  background-image: url(../images/our-training-1.png);
+}
+
+.our-training .img-1:hover {
+  background-image: url(../images/our-training-hover-1.png);
+}
+
+.our-training .img-2 {
+  background-image: url(../images/our-training-2.png);
+}
+
+.our-training .img-2:hover {
+  background-image: url(../images/our-training-hover-2.png);
+}
+
+.our-training .img-3 {
+  background-image: url(../images/our-training-3.png);
+}
+
+.our-training .img-3:hover {
+  background-image: url(../images/our-training-hover-3.png);
+}
+
+.our-training .img-4 {
+  background-image: url(../images/our-training-4.png);
+}
+
+.our-training .img-4:hover {
+  background-image: url(../images/our-training-hover-4.png);
 }
 
 .our-training .our-training-term-info {
-  width: 80%;
+  width: 75%;
   padding-left: 15px;
 }
 /* End Our Training */
@@ -232,17 +290,8 @@ footer .footer-logo img {
 }
 /* End Footer */
 
-/* Start Global Classes */
-.text-blue {
-  color: #07435b;
-}
-
-.text-orange {
-  color: #f27024;
-}
-/* End Global Classes */
-
 /* Media Query */
+/* Small Screen */
 @media (max-width: 768px) {
   p,
   li {
@@ -255,12 +304,17 @@ footer .footer-logo img {
   }
 
   /* Header */
-  header h3 {
-    font-size: 24px;
+  .home-header  h3 {
+    font-size: 20px;
   }
 
   /* About US*/
+  .about {
+    padding: 6rem 0;
+  }
+
   .about .about-us-term {
+    height: 260px;
     margin-bottom: 5rem;
   }
 
@@ -274,6 +328,11 @@ footer .footer-logo img {
     border-right: 150px solid #efefef;
   }
 
+  .our-training .our-training-term {
+    height: 130px;
+    margin-bottom: 25px;
+  }
+
   /* Location */
   .location .location-icon::before,
   .location .location-icon::after {
@@ -283,7 +342,6 @@ footer .footer-logo img {
 
 @media (min-width: 769px) and (max-width: 991px) 
 {
-
   /* Navbar */  
   .navbar-light .navbar-toggler {
     color: #fff;
@@ -300,18 +358,46 @@ footer .footer-logo img {
     border-left: 300px solid #efefef;
     border-right: 300px solid #efefef;
   }
-}
 
+  .our-training .our-training-term {
+    height: 200px;
+    margin-bottom: 40px;
+  }
+}
+/* Medium Screen */
 @media (max-width: 991px) {
+
   /* Navbar */
   .navbar .navbar-collapse {
-    position: relative;
-    left: -30px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #fff;
   }
 
-  .navbar .nav-item {
+  .navbar .nav-item,
+  .navbar .active {
+    border-radius: 20px;
+    font-size: 14px;
+    width: 25%;
+    margin: 6px auto;
     text-align: center;
+    color: #fb7f37 !important;
+    text-transform: uppercase;
+    transition: all 0.3s;
   }
+
+  .navbar .active .nav-link {color: #fff !important;}
+  
+  .navbar .nav-item:hover {
+    background-color: #fb7f37;
+    border-radius: 20px;
+  }
+
+  .navbar .nav-link {color: #fb7f37 !important;}
+
+  .navbar .nav-link:hover {color: #fff !important;}
 
   .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -320,5 +406,191 @@ footer .footer-logo img {
   .navbar-light .navbar-toggler {
     color: #fff;
     border-color: #fff;
+    margin-right: 15px;
   }
 }
+/******************** End HOME PAGE ********************/
+
+
+/******************** Start Services Page ********************/
+/* Start Header */
+.services-header {
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 136px;
+}
+
+.services-header .header-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 7px;
+  border: 7px solid #fff;
+}
+
+.services-header nav {
+  position: absolute;
+  bottom: -35%;
+  display: flex;
+}
+
+.breadcrumb {
+  background: none;
+  margin-bottom: 0;
+}
+
+.breadcrumb .breadcrumb-item,
+.breadcrumb a {color: #fff !important;}
+/* End Header */
+
+/* Start Intro */
+.intro {
+  background-color: #efefef;
+  padding: 6rem 0;
+}
+
+.intro .intro-info p {
+  color: #07435b;
+  margin-bottom: 1.5rem;
+}
+
+.intro .intro-info p span {
+  color: #f27024;
+  font-weight: bold;
+}
+/* End Intro */
+
+/* Start Services */
+.services .nav {
+  position: relative;
+  top: -25px;
+  left: 0;
+  width: 100%;
+}
+
+.services .nav-item {
+  text-align: center;
+  float: left;
+  width: 23%;
+  margin-right: 1%;
+  margin-left: 1%;
+  background-color: #efefef;
+  transition: all 0.3s;
+}
+
+.services .nav-item:hover {
+  background-color: #fff !important;
+  cursor: pointer;
+}
+
+.services .nav-link {
+  transition: all 0.3s;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #07435b; 
+  padding: 10px;
+  border: 3px solid #fff;
+}
+
+.services .nav-item:hover .nav-link {color: #f27024;}
+
+.services .nav-item .active {
+  background: #fff !important;
+  color: #f27024;
+}
+
+.services .services-term h6 {margin: 0;}
+
+.services .tab-content {margin: 2rem 0;}
+
+.services .services-info .services-info-main p {
+  margin-bottom: 1.5rem;
+  color: #07435b;
+}
+
+.services .services-info ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.services .services-info ul li {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #07435b;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.services .services-info ul li::before {
+  content: "\f0da";
+  font-family: "fontAwesome";
+  margin-right: 5px;
+} 
+
+.services .services-info ul li:hover {color: #f27024;}
+/* End Services */
+
+
+/* Start Footer */
+footer {background-color: #07435b; color: #fff;}
+
+footer .footer-copyright p {font-size: 15px;}
+
+footer .footer-logo img {width: 54px; height: 64px;}
+/* End Footer */
+
+/* Media Query */
+/* Small Screen */
+@media (max-width: 768px)
+{
+  p, li {font-size: 14px !important;}
+
+  /* Intro */
+  .intro {padding: 5rem 0;}
+
+  .intro .intro-info h3 {margin-bottom: 1.5rem;}
+
+  /* Services */
+  .services .services-term h6 {font-size: 14px;}
+
+  .services .services-course-list {margin-top: 1.5rem;}
+
+  .services .services-course-list h5 {margin-bottom: 1.5rem;}
+}
+
+/* Medium Screen */
+@media (max-width: 991px) {
+  
+  /* Services */
+  .services .nav {top: 15px;}
+
+  .services .nav-item {
+    float: none;
+    width: 80%;
+    margin: 5px 5%;
+  }
+
+  .services .nav-link {border: 1px solid #fff;}
+
+  .services .nav-link:hover,
+  .services .nav-item .active {border: 1px solid #f27024;}
+
+  .services .services-info {margin: 3rem 0;}
+}
+
+/* Start Global Classes */
+.text-blue {
+  color: #07435b;
+}
+
+.text-orange {
+  color: #f27024;
+}
+/* End Global Classes */
+/******************** End Services Page ********************/
